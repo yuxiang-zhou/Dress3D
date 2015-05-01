@@ -143,7 +143,7 @@ function webGLStart(){
         // model
 
         var loader = new THREE.OBJLoader( manager );
-        loader.load( 'javascripts/three/examples/obj/male02/male02.obj', function ( object ) {
+        loader.load( 'models/male02.obj', function ( object ) {
             human = object;
             object.traverse( function ( child ) {
 
