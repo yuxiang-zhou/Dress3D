@@ -1,31 +1,19 @@
 extends layout.jade
 
-block home-movie
+block content
     .container-fluid
-        .row.page_wrapper   
-            .col-sm-2(style='padding-right:0')
-                .container-fluid.commercial_space
-                    p ad
-            .col-sm-8
-                .container-fluid
-                    //showcase movies by filter
-                    .row.moviePage_nav
-                        .col-sm-8.movieByX_wrapper.vertical_middle  
-                            .dropdown   
-                                button#movieByX(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                                    | Dropdown
-                                    span.caret 
-                                ul.dropdown-menu(role='menu', aria-labelledby='movieByX')
-                                    li(role='presentation')
-                                        a(role='menuitem', tabindex='-1', href='#') By popularity           
-                                    li(role='presentation')
-                                        a(role='menuitem', tabindex='-1', href='#') By rating               
-                                    li(role='presentation')
-                                        a(role='menuitem', tabindex='-1', href='#') By release date                                
-                        .col-sm-4.vertical_middle
-                            p#moviePage_movie_count 100 movies
-                    .row
-            .col-sm-2(style='padding-left:0')
-                .container-fluid.commercial_space
-                    p ad
-        
+        .row
+            .col-sm-12
+                h1.text-center
+                    WebGL 3D Model Demo
+                hr
+                span.
+                    Usage: "A" rotate left, "D" rotate right, "W" zoom in, "S" zoom out, "arrows" move around, "1" texture 1, "2" texture 2
+        .row
+            .col-sm-12
+                #container
+
+block script
+    script(src='/javascripts/three/build/three.min.js')
+    script(src='/javascripts/three/examples/js/loaders/OBJLoader.js')
+
